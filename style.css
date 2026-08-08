@@ -1,0 +1,2117 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#05070A;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    background:url("hero.jpg");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+}
+
+/* Dark overlay */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.80),
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.85)
+    );
+
+}
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 70px;
+
+    z-index:1000;
+
+    transition:all .35s ease;
+
+}
+
+.navbar.scrolled{
+
+    background:rgba(5,7,10,0.75);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo img{
+
+    width:70px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:1px;
+    position:relative;
+    transition:.3s;
+}
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+    height:2px;
+
+    background:#E62429;
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+
+    color:#E62429;
+
+}
+
+.book-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#E62429;
+
+    padding:12px 28px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.book-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content{
+
+    position:absolute;
+
+    z-index:10;
+
+left:7%;
+top:57%;
+
+    transform:translateY(-50%);
+
+}
+
+.movie-logo{
+
+    width:420px;
+
+    max-width:90%;
+
+}
+
+.tagline{
+    font-size:22px;
+    color:#ddd;
+    margin-top:15px;
+    letter-spacing:2px;
+    line-height:1.5;
+
+    width:380px;
+    text-align:center;
+
+    margin-left:5px;   /* Change 15px to 10px, 20px, etc. if needed */
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.hero-buttons a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    padding:15px 32px;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+    font-family:'Poppins';
+
+}
+
+.trailer-btn{
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.ticket-btn{
+
+    background:#E62429;
+
+    color:white;
+
+}
+
+.hero-buttons button{
+
+    transition:.4s;
+
+}
+
+.hero-buttons a:hover{
+
+    transform:translateY(-5px);
+
+}
+/* Floating Animation */
+
+@keyframes float {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.movie-logo{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+/*=========================
+        ABOUT
+==========================*/
+.about{
+
+    padding:100px 8%;
+    background:#090909;
+
+}
+
+.about-title{
+
+    font-family:'Bebas Neue',sans-serif;
+    font-size:65px;
+    font-weight:400;
+    letter-spacing:4px;
+    text-align:center;
+    margin-bottom:20px;
+    color:#fff;
+
+}
+
+.about-description{
+
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+    line-height:1.9;
+    color:#cfcfcf;
+
+}
+
+.movie-info{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    max-width:1200px;
+    margin:auto;
+
+    background:#111;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:45px 20px;
+
+}
+
+.info-box{
+
+    flex:1;
+    text-align:center;
+
+}
+
+.info-box span{
+
+    display:block;
+
+    font-family:'Bebas Neue',sans-serif;
+
+    color:#E62429;
+
+    letter-spacing:3px;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.info-box h3{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:19px;
+
+    font-weight:400;
+
+    color:#fff;
+
+    line-height:1.7;
+
+}
+
+.divider{
+
+    width:1px;
+
+    height:90px;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    padding:15px 18px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.nav-links{
+    display:none;
+}
+
+.book-btn{
+    padding:10px 18px;
+    font-size:14px;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-heading{
+    gap:12px;
+}
+
+.section-heading span{
+    width:40px;
+}
+
+.section-heading h2{
+    font-size:38px;
+    letter-spacing:2px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 120px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main About Layout */
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 80px;
+    align-items: center;
+}
+
+
+/* Left Side */
+
+.about-title {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(60px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: 3px;
+
+    margin: 20px 0 30px;
+}
+
+.about-title span {
+    color: #E62429;
+}
+
+.about-description {
+    max-width: 620px;
+
+    color: #cfcfcf;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* Extra Story Text */
+
+.about-story {
+    max-width: 620px;
+
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-top: 20px;
+}
+
+
+/* Right Side */
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+
+    border-left: 1px solid rgba(255,255,255,.15);
+
+    padding-left: 45px;
+}
+
+
+/* Individual Information */
+
+.info-box {
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.info-box:last-child {
+    border-bottom: none;
+}
+
+.info-box span {
+    display: block;
+
+    color: #E62429;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.info-box h3 {
+    color: #fff;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* Hide old divider */
+
+.divider {
+    display: none;
+}
+
+
+/* Remove unused old card styling */
+
+.info-cards,
+.card {
+    display: none;
+}
+
+
+/* ================= ABOUT MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .about {
+        padding: 80px 22px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-title {
+        font-size: 58px;
+
+        text-align: center;
+    }
+
+    .about-description,
+    .about-story {
+        text-align: center;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .movie-info {
+        border-left: none;
+
+        border-top: 1px solid rgba(255,255,255,.15);
+
+        padding-left: 0;
+    }
+
+    .info-box {
+        padding: 22px 5px;
+    }
+
+}
+
+/* ================= TRAILER ================= */
+
+.trailer {
+    padding: 100px 20px 120px;
+    text-align: center;
+}
+
+.trailer-poster {
+    width: min(85%, 520px);
+
+    height: auto;
+
+    display: block;
+
+    margin: 40px auto 0;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.trailer-poster:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 35px 75px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= CAST ================= */
+
+.cast{
+    padding:60px 20px;
+}
+
+.cast-subtitle{
+    font-size:15px;
+    margin-bottom:30px;
+}
+
+.cast-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    max-width:320px;
+    margin:auto;
+}
+
+.cast-card{
+    width:100%;
+}
+
+.cast-card img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+.cast-info{
+    padding:18px;
+}
+
+.cast-info h3{
+    font-size:28px;
+}
+
+.cast-info p{
+    font-size:15px;
+}
+
+/* ================= BOOK NOW ================= */
+
+.book-section {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230, 36, 41, 0.18),
+            transparent 55%
+        );
+}
+
+
+/* Subtle cinematic glow */
+
+.book-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(230, 36, 41, 0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* Content */
+
+.book-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 700px;
+}
+
+
+/* Small label */
+
+.book-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #E62429;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 5px;
+}
+
+
+/* Heading */
+
+.book-content h2 {
+    margin: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(65px, 8vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: 3px;
+}
+
+.book-content h2 span {
+    color: #E62429;
+}
+
+
+/* Description */
+
+.book-content p {
+    margin: 30px auto;
+
+    max-width: 450px;
+
+    color: #aaa;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Button */
+
+.final-book-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 16px 30px;
+
+    background: #E62429;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    border-radius: 4px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.final-book-btn span {
+    font-size: 25px;
+
+    transition: transform .3s ease;
+}
+
+.final-book-btn:hover {
+    transform: translateY(-4px);
+
+    background: #ff3035;
+
+    box-shadow:
+        0 15px 35px rgba(230, 36, 41, .3);
+}
+
+.final-book-btn:hover span {
+    transform: translateX(5px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    padding:50px 20px;
+}
+
+.footer-title{
+    font-size:24px;
+}
+
+.footer-text{
+    font-size:14px;
+    line-height:1.7;
+}
+
+}
+/* ===========================
+        TRAILER
+=========================== */
+
+.trailer{
+
+    padding:120px 8%;
+
+    background:#050505;
+
+}
+
+.trailer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.trailer h2{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:70px;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.trailer p{
+
+    color:#cfcfcf;
+
+    margin-bottom:50px;
+
+    font-size:18px;
+
+}
+
+.trailer-poster{
+
+    position:relative;
+
+    width:75%;
+
+    max-width:900px;
+
+    margin:50px auto 0;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+}
+
+.trailer-poster img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:20px;
+
+}
+
+.play-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    background:#E62429;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:34px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.play-btn:hover{
+
+    transform:translate(-50%,-50%) scale(1.15);
+
+    box-shadow:0 0 40px rgba(230,36,41,.6);
+
+}
+/* ===========================
+          CAST
+=========================== */
+
+.cast{
+
+    padding:100px 8%;
+    background:#080808;
+
+}
+
+.cast h2{
+
+    font-family:'Bebas Neue',sans-serif;
+    font-size:68px;
+    letter-spacing:4px;
+    text-align:center;
+    margin-bottom:15px;
+
+}
+
+.cast-subtitle{
+
+    text-align:center;
+    color:#bdbdbd;
+    font-size:18px;
+    margin-bottom:60px;
+
+}
+
+.cast-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+    max-width:1000px;
+    margin:auto;
+
+}
+
+.cast-card{
+
+    background:#121212;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+
+}
+
+.cast-card:hover{
+
+    border-color:#E62429;
+    box-shadow:0 0 25px rgba(230,36,41,.25);
+
+}
+
+.cast-card img{
+
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    transition:.4s;
+
+}
+
+.cast-card:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.cast-info{
+
+    padding:22px;
+
+}
+
+.cast-info h3{
+
+    font-family:'Bebas Neue',sans-serif;
+    font-size:32px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+
+}
+
+.cast-info p{
+
+    color:#cfcfcf;
+    font-size:17px;
+    font-family:'Poppins',sans-serif;
+
+}
+/* ===========================
+        BOOK BUTTON
+=========================== */
+
+.book-section{
+
+    padding:70px 0 100px;
+    background:#080808;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.final-book-btn{
+
+    text-decoration:none;
+    color:white;
+    background:#E62429;
+    padding:18px 55px;
+    border-radius:50px;
+
+    font-family:'Bebas Neue',sans-serif;
+    font-size:28px;
+    letter-spacing:2px;
+
+    transition:.35s;
+
+}
+
+.final-book-btn:hover{
+
+    background:#ff2f35;
+
+    box-shadow:0 0 25px rgba(230,36,41,.45);
+
+}
+/* ===========================
+          FOOTER
+=========================== */
+
+.footer{
+
+    background:#050505;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-logo{
+
+    width:90px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-title{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:34px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-text{
+
+    color:#9f9f9f;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+
+.footer-credit{
+
+    color:#6f6f6f;
+
+    font-size:14px;
+
+}
+
+.footer-credit span{
+
+    color:#E62429;
+
+}
+section{
+
+    position:relative;
+
+}
+
+section:not(.hero)::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:85%;
+
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(230,36,41,.45),
+        transparent
+    );
+
+}
+
+/*====================================================
+        CAST SHOWCASE (NEW)
+====================================================*/
+
+.cast{
+
+padding:120px 8%;
+
+background:#080808;
+
+}
+
+.cast-showcase{
+
+display:grid;
+
+grid-template-columns:300px 1fr;
+
+gap:50px;
+
+margin-top:70px;
+
+align-items:center;
+
+}
+
+/* LEFT SIDE */
+
+.cast-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.cast-item{
+
+padding:22px 25px;
+
+font-family:'Bebas Neue',sans-serif;
+
+font-size:28px;
+
+letter-spacing:2px;
+
+background:#111;
+
+border-left:4px solid transparent;
+
+cursor:pointer;
+
+border-radius:14px;
+
+transition:.35s;
+
+color:#bdbdbd;
+
+}
+
+.cast-item:hover{
+
+transform:translateX(12px);
+
+color:white;
+
+background:#181818;
+
+}
+
+.cast-item.active{
+
+border-left:4px solid #E62429;
+
+background:#1b1b1b;
+
+color:white;
+
+box-shadow:0 0 30px rgba(230,36,41,.25);
+
+}
+
+/* RIGHT SIDE */
+
+.cast-display{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:45px;
+
+background:#111;
+
+padding:45px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.glow{
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+background:#E62429;
+
+filter:blur(180px);
+
+opacity:.18;
+
+right:-120px;
+
+top:-120px;
+
+transition:.5s;
+
+pointer-events:none;
+
+}
+
+.cast-display img{
+
+width:330px;
+
+height:500px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.45s;
+
+box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+}
+
+.display-content{
+
+flex:1;
+
+}
+
+.display-content h2{
+
+font-family:'Bebas Neue',sans-serif;
+
+font-size:68px;
+
+letter-spacing:3px;
+
+margin-bottom:10px;
+
+}
+
+.display-content h4{
+
+font-size:24px;
+
+font-weight:500;
+
+color:#E62429;
+
+margin-bottom:30px;
+
+transition:.4s;
+
+}
+
+.display-content p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#d0d0d0;
+
+}
+
+.display-info{
+
+display:flex;
+
+gap:60px;
+
+margin-top:40px;
+
+}
+
+.display-info span{
+
+display:block;
+
+font-family:'Bebas Neue',sans-serif;
+
+letter-spacing:2px;
+
+font-size:20px;
+
+margin-bottom:8px;
+
+color:#E62429;
+
+transition:.4s;
+
+}
+
+.display-info p{
+
+font-size:16px;
+
+color:white;
+
+}
+
+/* Hover animation */
+
+.cast-display img:hover{
+
+transform:scale(1.03);
+
+}
+
+/* Responsive */
+
+
+/*==========================
+QUOTE SECTION
+==========================*/
+
+.quote-section{
+
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 10%;
+
+background:
+linear-gradient(to bottom,#050505,#0d0d0d);
+
+overflow:hidden;
+
+}
+
+.quote-overlay{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+background:#E62429;
+
+filter:blur(260px);
+
+opacity:.12;
+
+border-radius:50%;
+
+}
+
+.quote-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:850px;
+
+}
+
+.quote-label{
+
+display:inline-block;
+
+letter-spacing:5px;
+
+font-size:14px;
+
+color:#999;
+
+margin-bottom:30px;
+
+}
+
+.movie-quote{
+
+font-family:'Bebas Neue',sans-serif;
+
+font-size:72px;
+
+line-height:1.15;
+
+letter-spacing:2px;
+
+font-weight:400;
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+.quote-author{
+
+margin-top:40px;
+
+font-size:20px;
+
+letter-spacing:4px;
+
+color:#E62429;
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   Screens up to 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        padding: 14px 18px;
+    }
+
+    .logo img {
+        width: 55px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .book-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .hero-content {
+        left: 50%;
+        top: 53%;
+        width: 88%;
+
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+
+    .movie-logo {
+        width: min(82vw, 300px);
+        max-width: 100%;
+    }
+
+    .tagline {
+        margin-top: 14px;
+
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-buttons {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        margin-top: 25px;
+    }
+
+    .hero-buttons a {
+        min-width: 145px;
+
+        padding: 12px 18px;
+
+        font-size: 13px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       SECTION SPACING
+    ========================= */
+
+    .about,
+    .trailer,
+    .cast,
+    .book-section {
+        padding: 70px 20px;
+    }
+
+
+    /* =========================
+       SECTION HEADINGS
+    ========================= */
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .section-heading span {
+        width: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       ABOUT SECTION
+    ========================= */
+
+    .about-title {
+        font-size: 46px;
+        letter-spacing: 2px;
+
+        line-height: 1.05;
+
+        margin-bottom: 18px;
+    }
+
+    .about-description {
+        width: 100%;
+        max-width: 500px;
+
+        margin: 0 auto 40px;
+
+        font-size: 15px;
+        line-height: 1.8;
+
+        text-align: center;
+    }
+
+    .movie-info {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 0;
+
+        border-radius: 16px;
+    }
+
+    .info-box {
+        width: 100%;
+
+        padding: 22px 15px;
+    }
+
+    .info-box span {
+        font-size: 16px;
+        letter-spacing: 2px;
+
+        margin-bottom: 8px;
+    }
+
+    .info-box h3 {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .divider {
+        display: block;
+
+        width: 70%;
+        height: 1px;
+
+        margin: 0 auto;
+
+        background: rgba(255,255,255,.12);
+    }
+
+
+    /* =========================
+       TRAILER SECTION
+    ========================= */
+
+    .trailer {
+        padding: 70px 18px;
+    }
+
+    .trailer h2 {
+        font-size: 46px;
+        letter-spacing: 2px;
+
+        margin-bottom: 12px;
+    }
+
+    .trailer p {
+        max-width: 330px;
+
+        margin: 0 auto 35px;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .trailer-poster {
+        width: 100%;
+        max-width: 500px;
+
+        margin: 30px auto 0;
+
+        border-radius: 16px;
+    }
+
+    .trailer-poster img {
+        width: 100%;
+        height: auto;
+
+        min-height: 0;
+
+        object-fit: cover;
+
+        border-radius: 16px;
+    }
+
+    .play-btn {
+        width: 70px;
+        height: 70px;
+
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       QUOTE SECTION
+    ========================= */
+
+    .quote-section {
+        min-height: 75vh;
+
+        padding: 90px 25px;
+    }
+
+    .quote-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+
+        margin-bottom: 22px;
+    }
+
+    .movie-quote {
+        font-size: clamp(34px, 9vw, 48px);
+
+        line-height: 1.15;
+
+        letter-spacing: 1px;
+    }
+
+    .quote-author {
+        margin-top: 30px;
+
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+
+    /* =========================
+   CAST SECTION
+========================= */
+
+.cast {
+    padding: 70px 18px;
+    overflow: hidden;
+}
+
+.cast-subtitle {
+    width: 100%;
+    max-width: 330px;
+
+    margin: 0 auto 35px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* Main Cast Layout */
+
+.cast-showcase {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 35px;
+}
+
+
+/* Character Names */
+
+.cast-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.cast-item {
+    width: 100%;
+
+    padding: 16px 12px;
+
+    font-size: 20px;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+    cursor: pointer;
+}
+
+
+/* Character Display */
+
+.cast-display {
+    width: 100%;
+
+    min-height: auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+/* Character Image */
+
+.cast-display > img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* Character Information */
+
+.display-content {
+    width: 100%;
+
+    padding: 25px 20px 30px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.display-content h2 {
+    font-size: 40px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+.display-content h4 {
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.display-content > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Role / Suit / Status */
+
+.display-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.display-info > div {
+    min-width: 0;
+}
+
+.display-info span {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+.display-info p {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* Glow */
+
+.glow {
+    width: 220px;
+    height: 220px;
+
+    filter: blur(80px);
+
+    opacity: .35;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .cast {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cast-item {
+        font-size: 18px;
+        padding: 14px 10px;
+    }
+
+    .cast-display > img {
+        max-height: 420px;
+    }
+
+    .display-content {
+        padding: 22px 17px 25px;
+    }
+
+    .display-content h2 {
+        font-size: 34px;
+    }
+
+    .display-info {
+        gap: 7px;
+    }
+
+    .display-info span {
+        font-size: 10px;
+    }
+
+    .display-info p {
+        font-size: 11px;
+    }
+}
+
+
+    /* =========================
+       BOOK TICKETS
+    ========================= */
+
+    .book-section {
+        padding: 75px 20px;
+    }
+
+    .book-section h2 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .book-section p {
+        max-width: 330px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .final-book-btn {
+        width: 100%;
+        max-width: 320px;
+
+        margin: 25px auto 0;
+
+        display: block;
+
+        padding: 16px 20px;
+
+        font-size: 18px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding: 50px 20px 35px;
+
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 80px;
+        max-width: 100%;
+    }
+
+    .footer-title {
+        font-size: 22px;
+
+        margin-top: 18px;
+    }
+
+    .footer-text {
+        max-width: 320px;
+
+        margin: 12px auto;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .footer-credit {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+}
+.navbar {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999999 !important;
+}
+
+.nav-links {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.nav-links a {
+    color: white !important;
+}
