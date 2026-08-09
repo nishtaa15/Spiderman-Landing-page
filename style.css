@@ -2115,3 +2115,152 @@ transform:translateY(30px);
 .nav-links a {
     color: white !important;
 }
+/* =========================
+   FINAL TYPOGRAPHY POLISH
+========================= */
+
+/* Normal section headings */
+.section-heading h2 {
+    font-size: clamp(42px, 5vw, 64px);
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+/* Keep the Hero title dramatic */
+.movie-logo {
+    max-width: 650px;
+}
+
+/* About heading */
+.about-title {
+    font-size: clamp(58px, 6vw, 78px);
+    letter-spacing: 2px;
+}
+
+/* Body text consistency */
+.about-description,
+.about-story,
+.cast-subtitle {
+    letter-spacing: 0.2px;
+}
+
+/* Don't let headings feel overly heavy */
+.section-heading h2,
+.about-title {
+    font-weight: 400;
+}
+/* =========================
+   NAV LINK POLISH
+========================= */
+
+.nav-links a {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #E62429;
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #E62429;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar {
+        padding: 18px 35px;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .hero {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about {
+        padding: 90px 6%;
+    }
+
+    .about-content {
+        gap: 45px;
+    }
+
+    .about-title {
+        font-size: 65px;
+    }
+
+    .trailer {
+        padding: 90px 30px;
+    }
+
+    .trailer-poster {
+        width: min(80%, 500px);
+    }
+
+    .cast {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .cast-showcase {
+        gap: 35px;
+    }
+
+    .cast-display {
+        min-height: 500px;
+    }
+
+    .book-section {
+        min-height: 60vh;
+        padding: 90px 30px;
+    }
+}
+.timeline-button {
+    display: inline-block;
+
+    margin-left: 15px;
+    padding: 14px 24px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.timeline-button:hover {
+    background: white;
+
+    color: #05070a;
+
+    border-color: white;
+}
