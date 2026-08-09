@@ -27,7 +27,6 @@ gsap.from(".hero-buttons",{
 
 gsap.registerPlugin(ScrollTrigger);
 
-// About Section
 gsap.from(".about", {
     opacity: 0,
     y: 60,
@@ -39,7 +38,6 @@ gsap.from(".about", {
     }
 });
 
-// Trailer Section
 gsap.from(".trailer", {
     opacity: 0,
     y: 60,
@@ -51,7 +49,6 @@ gsap.from(".trailer", {
     }
 });
 
-// Cast Section
 gsap.from(".cast", {
     opacity: 0,
     y: 60,
@@ -63,7 +60,6 @@ gsap.from(".cast", {
     }
 });
 
-// Book Section
 gsap.from(".book-section", {
     opacity: 0,
     y: 60,
@@ -75,7 +71,6 @@ gsap.from(".book-section", {
     }
 });
 
-// Footer
 gsap.from(".footer", {
     opacity: 0,
     y: 40,
@@ -86,7 +81,6 @@ gsap.from(".footer", {
         start: "top 90%"
     }
 });
-// Navbar Blur on Scroll
 
 window.addEventListener("scroll", () => {
 
@@ -99,10 +93,6 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
-/*====================================================
-      CAST SHOWCASE INTERACTION
-====================================================*/
 
 const castItems = document.querySelectorAll(".cast-item");
 
@@ -120,11 +110,9 @@ castItems.forEach(item => {
 
     item.addEventListener("mouseenter", () => {
 
-        // Active state
         castItems.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
 
-        // Fade Out
         gsap.to(
             [
                 displayImage,
@@ -195,9 +183,6 @@ castItems.forEach(item => {
     });
 
 });
-/*==========================
-QUOTE SECTION
-==========================*/
 
 gsap.fromTo(".movie-quote",
 {

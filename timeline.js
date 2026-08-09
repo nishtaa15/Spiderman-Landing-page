@@ -1,8 +1,6 @@
 const timelineItems = document.querySelectorAll(".timeline-item");
 
 
-// ================= HERO ANIMATION =================
-
 const heroSmall = document.querySelector(".hero-small");
 const heroTitle = document.querySelector(".hero-content h1");
 const heroDescription = document.querySelector(".hero-description");
@@ -36,8 +34,6 @@ heroElements.forEach((element, index) => {
 
 });
 
-
-// ================= TIMELINE SCROLL ANIMATION =================
 
 const observer = new IntersectionObserver(
 
